@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mijn Portfolio</title>
+    
+    <!-- Script for inserting standerd html -->
+    <script src="script/insertHtml.js"></script>
+    
+    <div include-html="snippets/header.html"></div>
+</head>
+<body>
+    <!-- Add linked content html files -->
+    <div include-html="snippets/navigationSnippet.html"></div>
+    
+    <div class="tab-content container">
+        <div class="tab-pane active fade show" id="start" role="tabpanel" aria-labelledby="start-tab">
+            <p>I'm in Start</p>
+        </div>
+        <div class="tab-pane fade" id="business" role="tabpanel" aria-labelledby="business-tab">
+            <p>I'm in Business</p>
+        </div>
+        <div class="tab-pane fade" id="connection" role="tabpanel" aria-labelledby="connection-tab">
+            <p>I'm in Connection</p>
+        </div>
+        <div class="tab-pane fade" id="technology" role="tabpanel" aria-labelledby="technology-tab">
+            <p>I'm in Technology</p>
+        </div>
+        <div class="tab-pane fade" id="project" role="tabpanel" aria-labelledby="project-tab">
+            <p>I'm in Project</p>
+        </div>
+    </div>
+    
+    <div id="blur"></div>
+    <div class="mainWrapper">
+            <div class="first">
+                <h3>Title page</h3>
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <video width="320" height="240" poster="img/placeholder.png" controls>
+                  <source src="movie.mp4" type="video/mp4">
+                  <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        
+        <div class="main">
+            <h4>Title paragraf</h4>
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <div class="img"><img src="img/placeholder.png"></div>
+            <div class="img"><img src="img/placeholder.png"></div>
+            <div class="img"><img src="img/placeholder.png"></div>
+        </div>
+        <div class="end">
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+    </div>
+
+    <!-- FOR BOOTSTRAP -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Add linked html files --> 
+    <script>
+        includeHTML();
+    </script>
+</body>
+</html>
