@@ -1,11 +1,3 @@
-.mainWrapper .first div {
-    width: 45%;
-    margin: 0 5% 5vh 0;
-
-    position: relative;
-    float: left;
-}
-
 .mainWrapper .main {
     display: inline-grid;
     grid-template-columns: 75% 25%;
@@ -13,10 +5,4 @@
 
 .mainWrapper .main div{
     margin-bottom: 4vh;
-}
-
-.end {
-    margin: 2% 0;
-    border-top: 1px solid #008000;
-    padding: 1vh 0;
 }

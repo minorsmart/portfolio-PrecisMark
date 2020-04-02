@@ -1,0 +1,23 @@
+video {
+    width: 50%;
+    height: 35vh;
+}
+
+.top {
+    width: 45%;
+    float: left;
+}
+
+.mainWrapper .grid {
+    display: inline-grid;
+    grid-template-columns: 32% 32% 32%;
+}
+
+.mainWrapper .grid div {
+    margin:  5%;
+    text-align: center;
+}
+
+.tekstBlok {
+    padding: 2vh 0;
+}
