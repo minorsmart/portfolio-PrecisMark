@@ -4,10 +4,11 @@
     <title>Mijn Portfolio</title>
     <!-- Script for inserting standerd html -->
     <script src="script/insertHtml.js"></script>
+    <script src="script/weatherApi.js"></script>
     
     <div include-html="snippets/header.html"></div>
 </head>
-<body>
+<body id="coverImage" style="background-image: url('img/smart_industry.jpg');">
     <!-- Add linked content html files -->
     <div include-html="snippets/navigationSnippet.html"></div>
     
@@ -30,8 +31,8 @@
     </div>-->
     
     <div id="mainTitle">
-        <h1>Welcome</h1>
-        <h2>Efficient, intelligent and powerfull</h2>
+        <h1>Paquaij Industrieel Product Ontwerper</h1>
+        <h2>Oog voor mens en product Efficient, intelligent and powerfull</h2>
     </div>
 
     <!-- FOR BOOTSTRAP -->
@@ -42,6 +43,8 @@
     <!-- Add linked html files --> 
     <script>
         includeHTML();
+        
+        console.log('test');
     </script>
 </body>
 </html>

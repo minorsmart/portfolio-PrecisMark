@@ -1,0 +1,11 @@
+#msiMain {
+    background-image: url("../img/MSI-Background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+/* -- SUBnavigation -- */
+.subNav {
+    position: relative;
+}

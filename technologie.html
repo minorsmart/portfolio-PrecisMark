@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Weerstation</title>
+    
+    <!-- Script for inserting standerd html -->
+    <script src="script/insertHtml.js"></script>
+    
+    <div include-html="snippets/header.html"></div>
+    <link type="text/css" rel="stylesheet" media="screen and (min-width: 1200px)" href="css/simpleTekstTemplate.css">
+</head>
+<body>
+    <!-- Add linked content html files -->
+    <div include-html="snippets/navigationSnippet.html"></div>
+    
+    <div class="coverImage" id="coverImage" style="background-image: url('img/technology/esp32.JPG');"></div>
+    
+    <div class="mainWrapper" id="coversize">
+            <div class="">
+                <div id="firstTekst">
+                    <h2>Smart Technologie</h2>
+                    <p><i>Bij "Smart Technologie" maak je kennis met verschillende technologiën. In het eerste deel wordt er gewerkt aan het programmeren en maken van een weerstation dormmiddel van een esp32 controler. Nadat het ontwerpproces is afgerond wordt er een PCB (Printed Curcuit Board) ontworpen.</i></p>
+                </div>
+            </div>
+            <div class="main">
+                <div class="img"><img src="img/technology/opdr-1_LED.JPG"></div>
+                <div class="tekstBlok">
+                    <h3>Kennismaken met de componenten</h3>
+                    <p>In het begin van het ontwerp proces ga je de verschillende componenten uittesten. Voor het weerstation heb je de volgende componenten nodig:</p>
+                    <ul>
+                        <li><p>ESP32 microcontroller (Espressif Systems Processor)</p></li>
+                        <li><p>LED en bijhoren weerstanden (~220 ohm)</p></li>
+                        <li><p>LDR sensor (Light Depended Resistor</p></li>
+                        <li><p>SHS (Soil Humidity Sensor)</p></li>
+                        <li><p>DHT sensor (a humidity and temperature sensor</p></li>
+                        <li><p>Relay</p></li>
+                    </ul>
+                </div>
+                <div class="img"><img src="img/placeholder.png"></div>
+                <div class="tekstBlok">
+                    <h3>Hoe Flynth Smart kan worden</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                </div>
+                <div class="img"><img src="img/placeholder.png"></div>
+                <div class="tekstBlok">
+                    <h3>Hoe Flynth Smart kan worden</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                </div>
+            </div>
+            <div class="end">
+                <h2>Learnings</h2>
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+        
+        <div include-html="snippets/technologie-multipageSelector.html"></div>
+    </div>
+
+    <!-- FOR BOOTSTRAP -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- Add linked html files --> 
+    <script>
+        includeHTML();
+    </script>
+</body>
+</html>

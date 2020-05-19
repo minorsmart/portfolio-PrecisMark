@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MSI</title>
+    <!-- Script for inserting standerd html -->
+    <script src="script/insertHtml.js"></script>
+    
+    <div include-html="snippets/header.html"></div>
+</head>
+<body id="coverImage" style="background-image: url('img/smart_industry.jpg');">
+    <!-- Add linked content html files -->
+    <div include-html="snippets/navigationSnippet.html"></div>
+    
+    <div id="mainTitle">
+        <h1>Minor Smart Industry</h1>
+        <h2>Efficient, intelligent and powerfull</h2>
+    </div>
+    
+    <div class="mainWrapper" id="msiMain">
+        <div class="introMain">
+            <h2>Over de minor "Smart Industry"</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+        </div>
+        <div class="img"><img src="img/MSI_logo_transparant.png"></div>
+        <div class="subNav">
+            <nav class="subNav">
+                <div id="navbarNavAltMarkup">
+                    <div class="navbar-nav nav" role="tablist">
+                        <a class="nav-item nav-link"  href="index.html"><i class="fa fa-fw fa-home"></i>Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" href="subject-MSI.html" id="MSI-tab"><i class="fa fa-play"></i> MSI</a>
+                        <a class="nav-item nav-link" href="flynthSmartTech.html" id="business-tab"><i class="fa fa-handshake-o"></i> Business</a>
+                        <a class="nav-item nav-link" href="technologie.html" id="technology-tab" role="tab" aria-controls="technology" aria-selected="true"><i class="fa fa-cog"></i> Technology</a>
+                        <a class="nav-item nav-link" data-toggle="tab" href="technologie.html" id="connection-tab" role="tab" aria-controls="connection" aria-selected="true"><i class="fa fa-code"></i> Connection</a>
+                        <a class="nav-item nav-link" data-toggle="tab" href="#project" id="project-tab" role="tab" aria-controls="project" aria-selected="true"><i class="fa fa-rocket"></i> Project</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="introMain">
+            <h3>In een volgelvlucht</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+        </div>
+    </div>
+    
+
+    <!-- FOR BOOTSTRAP -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- Add linked html files --> 
+    <script>
+        includeHTML();
+        
+        console.log('test');
+    </script>
+</body>
+</html>
