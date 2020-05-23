@@ -1,6 +1,7 @@
 .mainWrapper .main {
     display: inline-grid;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 40% 60%;
+    grid-gap: 1vw 10vh;
 }
 
 .mainWrapper .main div{

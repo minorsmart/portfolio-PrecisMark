@@ -28,13 +28,23 @@ body {
 }
 
 .navbar {
+    width: 100%;
     z-index: 10;
     position: absolute;
+    top: 0;
     
     color: white !important;
-    /*background-image: linear-gradient(20deg, #005500 55%, #000080) !important;*/
+/*    background-image: linear-gradient(20deg, #005500 55%, #000080) !important;*/
     filter: opacity(80%);
     background-color: transparent !important;
+}
+
+.navbar-toggler {
+    position: absolute;
+    top: 2.5vh;
+    right: 5vw;
+    z-index: 1;
+    margin: 0 auto;
 }
 
 .navbar-collapse {
@@ -43,11 +53,18 @@ body {
 
 .navbar-collapse > * {
     position: absolute;
-    right: 1%;
+    top: 0;
+    right: 0;
+    
+    padding: 10vh 1vw 0vh 2vw;
+    
+    background-color: white;
+    border-radius: 0 0 0 0.3em;
 }
 
 .navbar-toggler-icon{
-    filter: invert(100%);
+    filter: invert(0%);
+    z-index: 20;
 }
 
 .nav-link {
@@ -105,17 +122,12 @@ body {
 }
 
 .img {
-    width: 100%;
-    height: 18vh;
-    
+    width: 100%; 
     overflow: hidden;
 }
 
 .img img {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: inherit;
 }
 
 .first h3 {
@@ -139,7 +151,7 @@ div img {
 }
 
 #mainTitle {
-    margin-top: 5vh;
+    margin-top: 15vh;
     padding: 10%;
 }
 
@@ -159,4 +171,24 @@ div img {
     margin: 2% 0;
     border-top: 1px solid #008000;
     padding: 1vh 0;
+}
+
+blockquote {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+pre{
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    margin-bottom: 2vh;
+    overflow: auto;
+    width: auto;
+    padding: 0 2vh;
+    background-color: #eee;
+    width: 650px!ie7;
+    padding-bottom: 20px!ie7;
+    max-height: 600px;
+    box-shadow: 1px 2px #dfdfdf;
+    border-radius: 4px;
 }

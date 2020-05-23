@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head include-html="snippets/header.html">
     <title>Weerstation</title>
     
     <!-- Script for inserting standerd html -->
@@ -10,20 +10,20 @@
     <link type="text/css" rel="stylesheet" media="screen and (min-width: 1200px)" href="css/simpleTekstTemplate.css">
 </head>
 <body>
-    <!-- Add linked content html files -->
-    <div include-html="snippets/navigationSnippet.html"></div>
-    
     <div class="coverImage" id="coverImage" style="background-image: url('img/technology/esp32.JPG');"></div>
     
+    <!-- Add linked content html files -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" include-html="snippets/navigationSnippet.html"></nav>
+    
     <div class="mainWrapper" id="coversize">
-            <div class="">
+            <div class="prefase">
                 <div id="firstTekst">
                     <h2>Smart Technologie</h2>
-                    <p><i>Bij "Smart Technologie" maak je kennis met verschillende technologiën. In het eerste deel wordt er gewerkt aan het programmeren en maken van een weerstation dormmiddel van een esp32 controler. Nadat het ontwerpproces is afgerond wordt er een PCB (Printed Curcuit Board) ontworpen.</i></p>
+                    <p><i>Bij "Smart Technologie" maak je kennis met verschillende technologiën. In het eerste deel wordt er gewerkt aan het programmeren en maken van een <b>weerstation</b> dormmiddel van een <b>esp32 controler</b>. Nadat het ontwerpproces is afgerond wordt er een PCB (Printed Curcuit Board) ontworpen.</i></p>
                 </div>
             </div>
             <div class="main">
-                <div class="img"><img src="img/technology/opdr-1_LED.JPG"></div>
+                <div class="img"><img src="img/placeholder.png"></div>
                 <div class="tekstBlok">
                     <h3>Kennismaken met de componenten</h3>
                     <p>In het begin van het ontwerp proces ga je de verschillende componenten uittesten. Voor het weerstation heb je de volgende componenten nodig:</p>
@@ -36,16 +36,43 @@
                         <li><p>Relay</p></li>
                     </ul>
                 </div>
-                <div class="img"><img src="img/placeholder.png"></div>
+                <div class="img">
+                    <img src="img/technology/opdr-1_LED.JPG">
+                    <blockquote class="tekstBlok">
+                        <pre>
+<code>from machine import Pin
+import utime
+
+p2 = Pin(21, Pin.OUT)    # create output pin on GPIO2
+
+while True:
+    p2.on()              # set pin to "on" (high) level
+    utime.sleep_ms(1000) # small delay
+    p2.off()</code>
+                        </pre>
+                    </blockquote>
+                </div>
                 <div class="tekstBlok">
-                    <h3>Hoe Flynth Smart kan worden</h3>
+                    <h3>Led blink</h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
                 </div>
-                <div class="img"><img src="img/placeholder.png"></div>
+                <div class="img"><img src="img/technology/Weerstation_bb.png"></div>
                 <div class="tekstBlok">
-                    <h3>Hoe Flynth Smart kan worden</h3>
+                    <h3>Led blink</h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
                 </div>
+                <blockquote class="tekstBlok">
+                  <pre>
+<code>&lt;ul&gt;
+    &lt;li&gt;&lt;p&gt;ESP32 microcontroller (Espressif Systems Processor)&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p&gt;LED en bijhoren weerstanden (~220 ohm)&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p&gt;LDR sensor (Light Depended Resistor&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p&gt;SHS (Soil Humidity Sensor)&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p&gt;DHT sensor (a humidity and temperature sensor&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p&gt;Relay&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</code>
+                  </pre>
+                </blockquote>
             </div>
             <div class="end">
                 <h2>Learnings</h2>

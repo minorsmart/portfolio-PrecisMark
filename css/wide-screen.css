@@ -1,0 +1,9 @@
+.navbar-collapse > * {
+    padding: 2vh 5vw;
+    background-color: transparent;
+}
+
+/*page-content*/
+.prefase {
+    max-width: 70%;
+}
