@@ -24,4 +24,5 @@
           return;
         }
       }
+        console.log('Included a HTML snipped');
     }

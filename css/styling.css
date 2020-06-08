@@ -1,3 +1,8 @@
+.mainWrapper a {
+    color: #F7A84C;
+    font-weight: 600; 
+}
+
 h1 {
     font-size: 8vw;
     color: white;
@@ -12,13 +17,13 @@ h2 {
 
 h3 {
     font-size: 5vw;
-    color: #008000;
+    color: #253F79;
     text-emphasis: 1px solid black;
 }
 
 h4 {
     font-size: 3vw;
-    color: #000080;
+    color: #377A68;
     text-emphasis: 1px solid black;
     font-weight: 800;
 }

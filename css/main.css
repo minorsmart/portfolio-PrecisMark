@@ -1,5 +1,5 @@
 body {
-    min-width: 100vw;
+    max-width: 100vw;
     min-height: 100vh;
 /*    overflow: hidden;*/
 }
@@ -30,13 +30,17 @@ body {
 .navbar {
     width: 100%;
     z-index: 10;
-    position: absolute;
+    position: fixed;
     top: 0;
     
     color: white !important;
 /*    background-image: linear-gradient(20deg, #005500 55%, #000080) !important;*/
     filter: opacity(80%);
     background-color: transparent !important;
+}
+
+.subNav #navbarNavAltMarkup {
+    margin: 0 4vh;
 }
 
 .navbar-toggler {
@@ -90,7 +94,7 @@ body {
 
 .mainWrapper {
     position: absolute;
-    top: 100vh;
+    top: 120vh;
     
     margin: 5%;
 }
@@ -99,7 +103,7 @@ body {
     top: 20vh;
 }
 
-.mainWrapper div{
+.mainWrapper div {
     margin: 4% 0;
 }
 
@@ -122,7 +126,7 @@ body {
 }
 
 .img {
-    width: 100%; 
+    width: 100%;
     overflow: hidden;
 }
 
@@ -142,11 +146,14 @@ div img {
 
 .navbar-brand {
     width: 80%;
+    padding: 0.5%;
+}
+
+#mainLogo {
+    width: 6vh;
 }
 
 #mainLogo img {
-    width: 20%;
-    
     position: relative;
 }
 
@@ -174,6 +181,7 @@ div img {
 }
 
 blockquote {
+    display: none;
     position: relative;
     top: 0;
     left: 0;
@@ -183,7 +191,7 @@ pre{
     font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
     margin-bottom: 2vh;
     overflow: auto;
-    width: auto;
+    width: 100%;
     padding: 0 2vh;
     background-color: #eee;
     width: 650px!ie7;
@@ -191,4 +199,21 @@ pre{
     max-height: 600px;
     box-shadow: 1px 2px #dfdfdf;
     border-radius: 4px;
+}
+
+button {
+    background-color: #F7A84C;
+    border-color: transparent;
+    border-radius: 2em; 
+    font-size: 3vw; 
+}
+
+.toBottom {
+    position: absolute;
+    bottom: 0%;
+    left: 48vw;
+    
+    color: #377A68 !important;
+    font-size: 15vw;
+    transform: rotate(-90deg);
 }

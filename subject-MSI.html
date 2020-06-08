@@ -4,8 +4,6 @@
     <title>MSI</title>
     <!-- Script for inserting standerd html -->
     <script src="script/insertHtml.js"></script>
-    
-    <div include-html="snippets/header.html"></div>
 </head>
 <body id="coverImage" style="background-image: url('img/smart_industry.jpg');">
     <!-- Add linked content html files -->
@@ -14,31 +12,33 @@
     <div id="mainTitle">
         <h1>Minor Smart Industry</h1>
         <h2>Efficient, intelligent and powerfull</h2>
+        <div class="toBottom"><a onclick="scrollToLocation()">&#10094;</a></div>
     </div>
+    
+    
     
     <div class="mainWrapper" id="msiMain">
         <div class="introMain">
             <h2>Over de minor "Smart Industry"</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            <p>De minor "Smart Industry" wordt onder andere aangeboden op de HAN in nijmegen. De minor is ontstaan in samenhang met nieuwe ontwikkelingen in de technische industry. De minor focused zich voornamelijk op begrippen zoals "Smart Technology's" ookwel industry 4.0 genoemd.<br><br>"Smart Technology's" wordt verwezen naar de 30 innoverende technologiën waarvan wordt verwacht dat deze in de komende 10 jaar een grootte impact zullen maken op de manier van werken die wij nu kennen in de industry.<br>In de afbeelding hieronder is een schema te zien met de 30 technologiën waar met "Smart Technologies" naar gerevereerd wordt.</p>
         </div>
-        <div class="img"><img src="img/MSI_logo_transparant.png"></div>
-        <div class="subNav">
-            <nav class="subNav">
-                <div id="navbarNavAltMarkup">
-                    <div class="navbar-nav nav" role="tablist">
-                        <a class="nav-item nav-link"  href="index.html"><i class="fa fa-fw fa-home"></i>Home <span class="sr-only">(current)</span></a>
-                        <a class="nav-item nav-link" href="subject-MSI.html" id="MSI-tab"><i class="fa fa-play"></i> MSI</a>
-                        <a class="nav-item nav-link" href="flynthSmartTech.html" id="business-tab"><i class="fa fa-handshake-o"></i> Business</a>
-                        <a class="nav-item nav-link" href="technologie.html" id="technology-tab" role="tab" aria-controls="technology" aria-selected="true"><i class="fa fa-cog"></i> Technology</a>
-                        <a class="nav-item nav-link" data-toggle="tab" href="technologie.html" id="connection-tab" role="tab" aria-controls="connection" aria-selected="true"><i class="fa fa-code"></i> Connection</a>
-                        <a class="nav-item nav-link" data-toggle="tab" href="#project" id="project-tab" role="tab" aria-controls="project" aria-selected="true"><i class="fa fa-rocket"></i> Project</a>
-                    </div>
+        <div class="img" id="msiLogo"><img src="img/MSI_logo_transparant.png"></div>   
+        <nav class="subNav">
+            <h3>Meer informatie</h3>
+            <div id="navbarNavAltMarkup">
+                <div class="navbar-nav nav" role="tablist">
+                    <a class="nav-item nav-link"  href="index.html"><i class="fa fa-fw fa-home"></i>Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="subject-MSI.html" id="MSI-tab"><i class="fa fa-play"></i> Start</a>
+                    <a class="nav-item nav-link" href="flynthSmartTech.html" id="business-tab"><i class="fa fa-handshake-o"></i> Business</a>
+                    <a class="nav-item nav-link" href="technologie.html" id="technology-tab" role="tab" aria-controls="technology" aria-selected="true"><i class="fa fa-cog"></i> Technology</a>
+                    <a class="nav-item nav-link" href="smartConnection.html" id="connection-tab" role="tab" aria-controls="connection" aria-selected="true"><i class="fa fa-code"></i> Connection</a>
+                    <a class="nav-item nav-link" data-toggle="tab" href="#project" id="project-tab" role="tab" aria-controls="project" aria-selected="true"><i class="fa fa-rocket"></i> Project</a>
                 </div>
-            </nav>
-        </div>
-        <div class="introMain">
+            </div>
+        </nav>
+        <div class="discription">
             <h3>In een volgelvlucht</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            <p>De minor bestaat uit een vijf categoriën. Elke categorië heeft een bepaald thema die gelinkt worden aan innoverende ontwikkelingen in relatie met "industry 4.0".</p>
         </div>
     </div>
     
@@ -53,6 +53,12 @@
         includeHTML();
         
         console.log('test');
+    </script>
+    <script>
+        function scrollToLocation(){
+            window.scrollBy(0, 1150);
+            console.log("scrolled to location");
+        }
     </script>
 </body>
 </html>

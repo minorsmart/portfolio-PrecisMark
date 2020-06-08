@@ -3,7 +3,47 @@
     background-color: transparent;
 }
 
+/*subnav*/
+.subNav {
+    float: left;
+    margin: 0;
+}
+
+.subNav #navbarNavAltMarkup {    
+    width: 20vw;
+    
+    font-size: 1.2vw;
+}
+
 /*page-content*/
-.prefase {
+#firstTekst {
     max-width: 70%;
+}
+
+button {
+    font-size: 1.5vw; 
+}
+
+.toBottom {
+    font-size: 8vw;
+}
+
+/* Content */
+.introMain {
+    width: 50vw;
+    padding-right: 5vw;
+    float: left;
+}
+
+.discription {
+    position: absolute;
+    width: 55vw;
+    bottom: 0;
+    right: 0;
+}
+
+/*single elements*/
+#msiLogo {
+    width: 40vw;
+    margin-top: 10vh;
 }

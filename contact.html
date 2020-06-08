@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head include-html="snippets/header.html">
-    <title>Mijn Portfolio</title>
+    <title>Over mijzelf</title>
     <!-- Script for inserting standerd html -->
     <script src="script/insertHtml.js"></script>
 <!--    <script src="script/weatherApi.js"></script>-->
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </head>
 <body id="coverImage" style="background-image: url('img/smart_industry.jpg');">
     <!-- Add linked content html files -->
@@ -14,6 +15,11 @@
         <h1>Paquaij Industrieel Product Ontwerper</h1>
         <h2>Oog voor mens en product Efficient, intelligent and powerfull</h2>
     </div>
+    
+<!--    Profile needs to by visiable-->
+    <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="dark" data-vanity="markpaquaij"><a class="LI-simple-link" href='https://nl.linkedin.com/in/markpaquaij?trk=profile-badge'>Mark P.</a></div>
+    
+    <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="dark" data-vanity="markpaquaij"><a class="LI-simple-link" href='https://nl.linkedin.com/in/markpaquaij?trk=profile-badge'>Mark P.</a></div>
     
     <!-- FOR BOOTSTRAP -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -25,14 +31,6 @@
         includeHTML();
         
         console.log('test');
-    </script>
-    <script>
-        console.log("FetchApi");
-        fetch('https://sandbox-api.brewerydb.com/v2/?key=80dd6acd01713da3ce917fdf0e222de8')
-            .then(response => {
-                console.log(response);
-                return response.json();
-        });
     </script>
 </body>
 </html>

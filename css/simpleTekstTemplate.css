@@ -1,9 +1,17 @@
-.mainWrapper .main {
+.mainWrapper .grid1 {
     display: inline-grid;
-    grid-template-columns: 40% 60%;
-    grid-gap: 1vw 10vh;
+    grid-template-columns: 40% 55%;
+    grid-gap: 1vw 5%;
 }
 
 .mainWrapper .main div{
-    margin-bottom: 4vh;
+    min-height: 20em;
+}
+
+.mainWrapper .stair .img {
+    width: 40%;
+}
+
+.mainWrapper .stair img {
+    min-width: 50%;
 }

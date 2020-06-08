@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head include-html="snippets/header.html">
-    <title>Weerstation</title>
+    <title>Smart Coding</title>
     
     <!-- Script for inserting standerd html -->
     <script src="script/insertHtml.js"></script>
@@ -13,7 +13,7 @@
     <script src="script/javascriptFunction.js"></script>
 </head>
 <body>
-    <div class="coverImage" id="coverImage" style="background-image: url('img/technology/esp32.JPG');"></div>
+    <div class="coverImage" id="coverImage" style="background-image: url('img/connection/code.jpeg');"></div>
     
     <!-- Add linked content html files -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light" include-html="snippets/navigationSnippet.html"></nav>
@@ -21,25 +21,16 @@
     <div class="mainWrapper" id="coversize">
             <div class="prefase">
                 <div id="firstTekst">
-                    <h3>Smart Technologie</h3>
-                    <p><i>Bij "Smart Technologie" maak je kennis met verschillende technologiën. In het eerste deel wordt er gewerkt aan het programmeren en maken van een <b>weerstation</b> dormmiddel van een <b>esp32 controler</b>. Nadat het ontwerpproces is afgerond wordt er een PCB (Printed Curcuit Board) ontworpen.</i></p>
+                    <h2>Connection</h2>
+                    <p><i>Bij "Smart Connection" maak je kennis met verschillende technologiën op het gebied van internet en cloud.</i></p>
                 </div>
             </div>
-            <div class="main grid1">
+            <div class="main">
 <!--       Componenets List         -->
-                <div class="img"><img src="img/technology/weerstation.jpg"></div>
+                <div class="img"><img src="img/placeholder.png"></div>
                 <div class="tekstBlok">
-                    <h4>Kennismaken met de componenten</h4>
-                    <p>In het begin van het ontwerp proces ga je de verschillende componenten uittesten. Voor het weerstation heb je de volgende componenten nodig:</p>
-                    <ul>
-                        <li><p>ESP32 microcontroller (Espressif Systems Processor) (ESP32-Wroom-32)</p></li>
-                        <li><p>LED en bijhoren weerstanden (~220 ohm) (5x)</p></li>
-                        <li><p>LDR sensor (Light Depended Resistor) en bijhoren weerstanden (~220 ohm)</p></li>
-                        <li><p>SHS (Soil Humidity Sensor)</p></li>
-                        <li><p>DHT sensor (a humidity and temperature sensor</p></li>
-                        <li><p>Relay</p></li>
-                        <li><p>Rf Transmitter (315Mhz / 433Mhz) met "Klink aan Klik uit" Stopcontact Schakelaar (ACC-2300)</p></li>
-                    </ul>
+                    <h3>Doel van de site</h3>
+                    <p></p>
                 </div>
 <!--       LED blink test         -->
                 <div class="img">
@@ -47,20 +38,39 @@
                     <img id="opdr-1_LED.JPG" src="img/technology/opdr-1_LED.JPG">
                     <blockquote class="tekstBlok" id="code_opdr-1_LED">
                     <pre>
-<code>from machine import Pin
-import utime
-
-p2 = Pin(21, Pin.OUT)    # create output pin on GPIO2
-
-while True:
-    p2.on()              # set pin to "on" (high) level
-    utime.sleep_ms(1000) # small delay
-    p2.off()</code>
+<code>    function includeHTML() {
+      var z, i, elmnt, file, xhttp;
+      /* Loop through a collection of all HTML elements: */
+      z = document.getElementsByTagName("*");
+      for (i = 0; i &lt; z.length; i++) {
+        elmnt = z[i];
+        /*search for elements with a certain atrribute:*/
+        file = elmnt.getAttribute("include-html");
+        if (file) {
+          /* Make an HTTP request using the attribute value as the file name: */
+          xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+              if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+              if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+              /* Remove the attribute, and call this function once more: */
+              elmnt.removeAttribute("include-html");
+              includeHTML();
+            }
+          } 
+          xhttp.open("GET", file, true);
+          xhttp.send();
+          /* Exit the function: */
+          return;
+        }
+      }
+        console.log('Included a HTML snipped');
+    }</code>
                     </pre>
                 </blockquote>
                 </div>
                 <div class="tekstBlok">
-                    <h4>LED blink</h4>
+                    <h3>LED blink</h3>
                     <p>Om een LED aan te sturen wordt de voeding van de LED op een van de <a href="https://www.robotexchange.io/uploads/default/optimized/1X/6f43b88089740dd59db998f3f561ab87ba319d8a_2_1380x690.png">GPIO pinnen</a> aangesloten. Via deze aanluiting wordt de voeding naar de LED geregeld. De negatieve aansluiting van de pin wordt verbonden via een van de GRD pinnen.<br>Met behulp van de code gaat de LED (aangesloten via GPIO 2) knipperen.</p>
                 </div>
 <!--        LDR test        -->
@@ -99,7 +109,7 @@ while True:
                 </blockquote>
                 </div>
                 <div class="tekstBlok">
-                    <h4>LDR</h4>
+                    <h3>LDR</h3>
                     <p>Een LDR (Licht Depended resitor) wordt gebruikt om de intensiteit van licht te meten. Hoe meer licht de sensor opvangt hoe groter de weerstand en hoe kleiner de stroomsterkte. Deze strommsterkte wordt gemeten door de controller. Via de <a href="https://www.robotexchange.io/uploads/default/optimized/1X/6f43b88089740dd59db998f3f561ab87ba319d8a_2_1380x690.png">SVP pin</a> kan de controller de stromsterkte meten.<br>Wanneer de LDR onder een bepaalde waarde zakt gaat een LED branden.</p>
                 </div>
 <!--        SHS test        -->
@@ -130,7 +140,7 @@ for x in range (0, 50):
                 </blockquote>
                 </div>
                 <div class="tekstBlok">
-                    <h4>Soil Humidity Sensor</h4>
+                    <h3>Soil Humidity Sensor</h3>
                     <p>Een "Soil Humidity sensor" wordt gebruik om de mate van vochtigheid in de grond te meten. De sensor stuurd een stroompje door de grond. Waneer er weinig vocht in de grond zit wordt kan de stroom moeilijk verplaatsen en is de weerstand groter. Wanneer de grond een hogere vochtigheid heeft. Kan de stroom zich via het water gemakkelijker verplaatsen. En is de weerstand lager.</p>
                 </div>
 <!--      DHT test          -->
@@ -185,7 +195,7 @@ relay_pin.off()                # set pin to "off" (low) level</code>
                     </blockquote>
                     </div>
                 <div class="tekstBlok">
-                    <h4>Relay module</h4>
+                    <h3>Relay module</h3>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
                 </div>
                 <blockquote class="tekstBlok">
@@ -203,7 +213,7 @@ while True:
                 </blockquote>
                 <div class="img"><img src="img/technology/Weerstation_bb.png"></div>
                 <div class="tekstBlok">
-                    <h4>Het volledige curcuit</h4>
+                    <h3>Het volledige curcuit</h3>
                     <p>Al de sensoren bij elkaar vormen de inputs voor het weerstation. In het schema is te zien dat er vijf LED's worden gebruikt. Door de LED te koppelen met de sensoren kan er visuele feedback gegeven worden.</p>
                 </div>
                 <blockquote class="tekstBlok">
@@ -220,7 +230,7 @@ while True:
                 </blockquote>
             </div>
             <div class="end">
-                <h3>Learnings</h3>
+                <h2>Learnings</h2>
                 <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 
                 <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>

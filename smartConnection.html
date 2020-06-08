@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head include-html="snippets/header.html">
+    <title>Smart Coding</title>
+    
+    <!-- Script for inserting standerd html -->
+    <script src="script/insertHtml.js"></script>
+    
+    <div include-html="snippets/header.html"></div>
+    
+    <!--javascript's-->
+    <script src="script/javascriptFunction.js"></script>
+    
+    <style>
+        .mainWrapper div {
+            margin: 0;
+        }
+        
+        .grid {
+            width: 90vw;
+            display: inline-grid;
+            grid-template-columns: 31% 31% 31%;
+            grid-gap: 3.5%;
+        }
+
+        .gridBlock, .mySlides1, .mySlides2, .mySlides3 {
+            position: relative;
+            width: 100%;
+            height: 25vw;
+            font-size: 5vw;
+            text-align: center;
+            overflow: hidden;
+        }
+        
+        .textBlock {
+            text-align: left;
+            overflow: scroll;
+        }
+        
+        .gridBlock img {
+            object-fit: cover;
+            min-height: 100%;
+        }
+        
+        /* width */
+        .textBlock::-webkit-scrollbar {
+          width: 2%;
+        }
+
+        /* Handle */
+        .textBlock::-webkit-scrollbar-thumb {
+          background: #888; 
+        }
+
+        /* Handle on hover */
+        .textBlock::-webkit-scrollbar-thumb:hover {
+          background: #555; 
+        }
+    </style>
+    <style>
+    .mySlides1, .mySlides2, .mySlides3 {
+        display: none;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+        margin: auto;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        color: #F7A84C !important;
+        font-weight: bold;
+        transition: 0.6s ease;
+        border-radius: 3px;
+        user-select: none;
+        height: 100%;
+        width: 30%;
+        padding-top: 32%;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        padding-left: 10%;
+    }
+        
+    .prev {
+        left: 0;
+        padding-right: 10%;
+    }
+
+    /* On hover, add a grey background color */
+    .prev:hover, .next:hover {
+        color: white!important;
+    }
+        
+    .next:hover {
+        background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.6));
+    }
+        
+    .prev:hover {
+        background-image: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0.6));
+    }
+        
+    .blockTitle {
+        display: block;
+        position: absolute;
+        z-index: 1;
+        color: #f1f1f1;
+        width: inherit;
+        margin-top: 3%;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 0.5em;
+        letter-spacing: 0.1em;
+        text-shadow: 1px 1px 2px #aaa;
+    }
+</style>
+</head>
+<body>
+    <div class="coverImage" id="coverImage" style="background-image: url('img/connection/code.jpeg');"></div>
+    
+    <!-- Add linked content html files -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" include-html="snippets/navigationSnippet.html"></nav>
+        
+    <div class="mainWrapper" id="coversize">
+        <div class="prefase">
+            <div id="firstTekst">
+                <h3>Smart Technologie</h3>
+                <p><i>Bij "Smart Technologie" maak je kennis met verschillende technologiën. In het eerste deel wordt er gewerkt aan het programmeren en maken van een <b>weerstation</b> dormmiddel van een <b>esp32 controler</b>. Nadat het ontwerpproces is afgerond wordt er een PCB (Printed Curcuit Board) ontworpen.</i></p>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="gridBlock slideshow-container">
+                <h2 class="blockTitle">Slides</h2>
+                  <div class="mySlides1">
+                    <img src="img/connection/slideCode.png">
+                  </div>
+
+                  <div class="mySlides1">
+                    <img src="img/FlynthPeople.jpg">
+                  </div>
+
+                  <div class="mySlides1">
+                    <img src="img/MSI-Background.png">
+                  </div>
+
+                <div class="mySlides1">
+                    <img src="img/technology/5_relay.jpg">
+                </div>
+                <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+            </div>
+            <div class="gridBlock textBlock">
+                <h4>Smart Technologie</h4>
+                <p><i>Bij "Smart Technologie" maak je kennis met verschillende technologiën. In het eerste deel wordt er gewerkt aan het programmeren en maken van een <b>weerstation</b> dormmiddel van een <b>esp32 controler</b>. Nadat het ontwerpproces is afgerond wordt er een PCB (Printed Curcuit Board) ontworpen.</i></p>
+            </div>
+            <a href="gitHub.html"><div class="gridBlock">
+                <h2 class="blockTitle">GitHub</h2>
+                <img src="img/github/Git%20Code%20Branch.jpg">
+            </div></a>
+            <div class="gridBlock">
+                <h2 class="blockTitle">Include file</h2>
+                <img src="img/connection/includeHTML.png">
+            </div>
+            <div class="gridBlock"><img src="img/placeholder.png"></div>
+            <div class="gridBlock slideshow-container">
+              <div class="mySlides2">
+                <img src="img/placeholder.png">
+              </div>
+
+              <div class="mySlides2">
+                <img src="img/smart_industry.jpg">
+              </div>
+
+              <div class="mySlides2">
+                <img src="img/connection/code.jpeg">
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+            </div>
+            <div class="gridBlock">
+                <h2 class="blockTitle">Portfolio ontwerp</h2>
+                <img src="img/connection/adobeXDdesign.png"></div>
+            <div class="gridBlock"><img src="img/placeholder.png"></div>
+            <div class="gridBlock"><img src="img/placeholder.png"></div>
+            <div class="gridBlock slideshow-container">
+                <h2 class="blockTitle">API's</h2>
+              <div class="mySlides3">
+                <img src="img/placeholder.png">
+              </div>
+
+              <div class="mySlides3">
+                <img src="img/placeholder.png">
+              </div>
+              <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+            </div>
+            <div class="gridBlock"><img src="img/placeholder.png"></div>
+            <div class="gridBlock"><img src="img/placeholder.png"></div>
+        </div>
+    </div>
+    
+    <!-- FOR BOOTSTRAP -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- Add linked html files --> 
+    <script>
+        includeHTML();
+        
+        console.log('test');
+    </script>
+    <script>
+        console.log("FetchApi");
+        fetch('https://sandbox-api.brewerydb.com/v2/?key=80dd6acd01713da3ce917fdf0e222de8')
+            .then(response => {
+                console.log(response);
+                return response.json();
+        });
+    </script>
+            <script>
+            var slideIndex = [1,1,1];
+            var slideId = ["mySlides1", "mySlides2", "mySlides3"]
+            showSlides(1, 0);
+            showSlides(1, 1);
+            showSlides(1, 2);
+            
+            var lastSlide = 0;
+
+            var myVar = setInterval(autoSlide, 10000);   
+            function autoSlide(){
+                console.log('lastSlide = ', lastSlide);
+                if (lastSlide < slideId.length){
+                    plusSlides(1, lastSlide);
+                    console.log(1, lastSlide);
+                    lastSlide = lastSlide + 1;
+                    console.log('lastSlide+ = ', lastSlide);
+                } else {
+                    lastSlide = 0;
+                    autoSlide();
+                }
+            }
+
+            function plusSlides(n, no) {
+                showSlides(slideIndex[no] += n, no);
+            }
+
+            function showSlides(n, no) {
+                var i;
+                var x = document.getElementsByClassName(slideId[no]);
+                console.log(slideId[no]);
+
+                if (n > x.length) {
+                    console.log(slideIndex[no] = 1);
+                    slideIndex[no] = 1
+                }   
+                 
+                if (n < 1) {
+                    console.log(slideIndex[no] = x.length);
+                    slideIndex[no] = x.length
+                }
+                 
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x[slideIndex[no]-1].style.display = "block";
+            }
+        </script>
+</body>
+</html>
