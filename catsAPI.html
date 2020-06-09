@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head include-html="snippets/header.html">
-    <title>ASML</title>
+    <title>Cat Facks</title>
     
     <!-- Script for inserting standerd html -->
     <script src="script/insertHtml.js"></script>
@@ -18,9 +18,20 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light" include-html="snippets/navigationSnippet.html"></nav>
     
     <div class="mainWrapper" id="coversize">
-        <iframe style="width: 90vw; height: 100vh; display: block;" src="https://next.canvanizer.com/canvas/rY38X7mfoMPbo" title="W3Schools Free Online Web Tutorials"></iframe>
-        
-        <iframe style="width: 90vw; height: 100vh; display: block;" src="https://xd.adobe.com/view/85307fb4-3a83-48d3-53a1-8e8924c7196a-f301/?fullscreen" title="ASML"></iframe>
+        <div class="prefase">
+            <div id="firstTekst">
+                <h3>Cat Facts API</h3>
+                <p><i>De <a href="https://alexwohlbruck.github.io/cat-facts/" target="_blank">cat facts API</a> genereerd verschillende feiten over katten. De api call vind plaats bij het laden van de pagina en wanneer een nieuw verzoek wordt gevraagd.<br>Wanneer een API call wordt gestart wordt de volledig data-set opgevraagd. De data wordt omgezet in  een .json format. Tot slot wordt een "random" nummer gerenegeerd die wordt gebruikt om de string te vinden en weer te geven in een html element.</i></p>
+            </div>
+        </div>
+        <div class="main">
+            <img src="img/api/catsAPIcode.png" style="border-radius: 0.8em;">
+            <a onclick="getCat()"><div>
+                <h4>Cat Facts (API)</h4>
+                <p id="cat"></p>
+                <p><b><i>Click on tile to regenerate</i></b></p>
+            </div></a>
+        </div>
     </div>
     
     <!-- FOR BOOTSTRAP -->
@@ -34,5 +45,8 @@
         
         console.log('test');
     </script>
+    
+    <!-- cat Facks API -->
+    <script src="script/catFacts.js"></script>
 </body>
 </html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        
+        <title>Fetch JSON form API and do something</title>
+    </head>
+    <body>
+        <h1>Where is the iss</h1>
+        <p id="name"></p>
+        <br>
+        <p id="cat"></p>
+        
+        <script>
+//            Set API url in constant
+            const api_satellites_url = 'https://api.wheretheiss.at/v1/satellites/25544'
+            
+//            Set function to fetch API
+            async function getISS() {
+                const response = await fetch(api_satellites_url);
+//                convert data to json
+                const data = await response.json();
+                console.log(data);
+                console.log(data.name);
+                
+//                get data latitude and set content in element form id
+                document.getElementById('name').textContent = data.latitude;
+                
+            }            
+//            call function
+            getISS();   
+            
+            
+            const api_cats_url = 'https://cat-fact.herokuapp.com/facts/'
+            
+            async function getCat() {
+                const response = await fetch(api_cats_url);
+//                convert data to json
+                const data = await response.json();
+//                get data set x in array
+                console.log(data)
+//                generate random _id from 0 up to 230:
+                var _id = Math.floor((Math.random() * 231));
+                
+//                display text on screen
+                cat = data.all[_id].text;
+                document.getElementById('cat').textContent = cat;
+                
+            }            
+//            call function
+            getCat();
+        </script>
+    </body>
+</html>
