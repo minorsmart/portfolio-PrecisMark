@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head include-html="snippets/header.html">
+    <title>Additive Manufacturing</title>
+    
+    <!-- Script for inserting standerd html -->
+    <script src="script/insertHtml.js"></script>
+    
+    <div include-html="snippets/header.html"></div>
+    <link type="text/css" rel="stylesheet" media="screen and (min-width: 1200px)" href="css/simpleTekstTemplate.css">
+    
+    <style>
+        #firstTekst {
+            margin: 0;
+            margin-right: 5%;
+            float: left;
+        }
+        
+        .prefase .img {
+            max-width: 20%;
+        }
+        
+        .bLeft {
+            float: left;
+        }
+        
+        .img {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .bright img {
+            float: right;
+            max-width: 100%;
+        }
+        
+        .tekstBlok {
+            display: inline-block;
+            width: 60%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        
+    </style>
+</head>
+<body class="msiMain">
+    <div class="coverImage" id="coverImage" style="background-image: url('img/additveManuf/additive manufacturing.jpg');"></div>
+    
+    <!-- Add linked content html files -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" include-html="snippets/navigationSnippet.html"></nav>
+    
+    <div class="mainWrapper" id="coversize">
+            <div class="prefase">
+                <div id="firstTekst">
+                    <h3>Additive Manufacturing</h3>
+                    <p><i>Additive Manufacturing (AM) is het proces van het maken van voorwerpen op basis van 3D-modelgegevens. Deze voorwerpen worden met de meeste technologieën laag voor laag opgebouwd. Dit in tegenstelling tot conventioneel technieken.<br>
+                    <br>
+                    Binnen Additive Manufacturing kennen we verschillende printtechnieken. De meest voorkomende technieken zijn:</i></p>
+                    <ul>
+                        <li>Fused Deposition Modelling (FDM)</li>
+                        <li>Selective Laser Sintering (SLS)</li>
+                        <li>Stereo Lithography Apparatus (SLA)</li>
+                        <li>Selective Laser Melting (SLM)</li>
+                        <li>Direct Metal Laser Sintering (DMLS)</li>
+                        <li>Digital Light Synthesis (DLS)</li>
+                    </ul>
+                </div>
+                <div class="img"><img src="img/additveManuf/3d-printer-printing.jpg"></div>
+            </div>
+            <div class="main stair">
+                <div>
+                    <div class="img bLeft"><img src="img/placeholder.png"></div>
+                    <div class="tekstBlok bright">
+                    <h4>Potentiële AM-toepassingen voor ASML</h4>
+                    <p>Momenteel is het zo dat als er onderdelen van de machines van <a href="https://www.asml.com/en/">ASML</a> vervangen moeten worden, deze geleverd moeten worden vanaf de dichtstbijzijnde fabriek, die in sommige gevallen niet in hetzelfde land zit als de klant. Hierdoor is er sprake van een aantal problemen als gevolg van deze situatie:</p>
+                    <uL>
+                        <li>De servicepunten moeten vele onderdelen voorradig houden om service te kunnen leveren;</li>
+                        <li>Onderdelen die niet in voorraad zijn moeten besteld worden, en dit kan veel tijd kosten; </li> 
+                        <li>De machines van ASML leveren de klant veel omzet op, dus elke minuut dat een machine stil staat omdat een onderdeel niet voorradig is, kost veel geld; </li>
+                        <li>Als er door één servicepunt meerdere machines worden onderhouden, moeten vele verschillende soorten onderdelen voorradig gehouden worden; </li>
+                        <li>Als onderdelen niet voorradig zijn bij de fabriek, moeten deze eerst gemaakt worden. </li>
+                    </uL>
+                    <p>De mogelijkheid voor de ASML-servicepunten om on-demand onderdelen te kunnen maken is dan ook het aspect wat we gaan behandelen als AM-toepassing voor ASML.</p>
+                </div>
+                </div>
+                <div>
+                    <div class="tekstBlok bLeft">
+                    <h4>Concrete toepassingen bij ASML</h4>
+                    <p>Voor een servicepunt van ASML zijn er verschillende soorten onderdelen nodig van verschillende soorten materialen. Zo zou een 3D printer gebruikt kunnen worden om plastic of metalen onderdelen te maken. Om te bepalen wat voor type printer ASML het beste kan kiezen moeten er een aantal aspecten helder gemaakt worden. Er moet gekeken worden naar van welk materiaal veel van de onderdelen zijn. Dit heeft namelijk veel invloed op het type printer. Voor metalen onderdelen zal een SLM-printer of een DMLS-printer gebruikt kunnen worden, deze zijn erg prijzig maar hebben een aantal grote voordelen (Sculpteo[a], z.d., Sculpteo[b], z.d.). Deze printers hebben namelijk hoge precisie en de diversiteit. Naast de ruime keuze aan materiaalsoorten voor de print, zoals aluminium (SLM), RVS (DMLS) en Titanium (DMLS) (Sculpteo[a], z.d., Sculpteo[b], z.d.), is er ook het voordeel dat de onderdelen net zo sterk zijn, dan wel niet sterker dan dezelfde onderdelen uit een gietmal. Ook is een printer in staat gecompliceerde onderdelen te maken die andere productiemiddelen niet kunnen. Ook moet er gekeken worden naar wat de geprinte onderdelen op langer termijn gaan doen. Een materiaal kan misschien op de trekbank dezelfde sterkte hebben. Maar kan op lange termijn sneller verzwakken door "verouderings verschijnselen". Als bijvoorbeeld de kruip kans hoger ligt, zal bijvoorbeeld dragende of draaiende onderdelen uiteindelijk eerder vervangen moeten worden.</p>
+                </div>
+                    <div class="img bright">
+                        <img src="img/placeholder.png">
+                    </div>
+                </div>
+                <div>
+                    <div class="img bLeft"><img src="img/placeholder.png"></div>
+                    <div class="tekstBlok bright">
+                    <h4>Conclusie</h4>
+                    <p>Voor ASML zijn er op het gebied van Additive Manufacturing een aantal kansrijke situaties. Uit deze opdracht is dan ook gebleken dat er voor ASML veel verschillende manieren zijn om Additive Manufacturing toe te passen. In deze opdracht is er gekozen om te kijken naar de toepassing van AM in servicepunten van ASML om te ondersteunen bij reparaties en onderhoud. Om dit succesvol te doen zijn er wel een aantal aspecten waar rekening gehouden moet worden, namelijk:</p> 
+                    <ul>
+                        <li>Snelheid printer; </li>
+                        <li>Kwaliteit van de print; </li>
+                        <li>Moeilijkheidsgraad van bediening; </li>
+                        <li>Kosten printmateriaal; </li>
+                        <li>Kosten printer.</li>
+                    </ul>
+                        <p><a href="img/additveManuf/Additive%20Manufacturing%20ASML.pdf"><i>Bekijk het volledige rapport</i></a></p>
+                </div>
+                </div>
+            </div>
+            <div class="end">
+                <h3>Learnings</h3>
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+        
+        <div include-html="snippets/technologie-multipageSelector.html"></div>
+        <a href="subject-MSI.html" class="toToppic">terug naar MSI</a>
+    </div>
+
+    <!-- FOR BOOTSTRAP -->
+        <!--    footer ( and scripts) -->
+    <footer include-html="snippets/footer.html"></footer>
+    
+    <!-- Add linked html files --> 
+    <script include-html="script/javascriptFunction.js">
+        includeHTML();
+        
+        console.log('Logging to the console');
+    </script>
+</body>
+</html>

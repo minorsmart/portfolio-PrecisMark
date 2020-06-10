@@ -1,7 +1,6 @@
 body {
     max-width: 100vw;
     min-height: 100vh;
-/*    overflow: hidden;*/
 }
 
 .coverImage {
@@ -201,11 +200,27 @@ pre{
     border-radius: 4px;
 }
 
-button {
+.prevNext {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+#next, #prev {
     background-color: #F7A84C;
     border-color: transparent;
-    border-radius: 2em; 
-    font-size: 3vw; 
+    border-radius: 0.4em; 
+    font-size: 3vh;
+    color: #253F79;
+}
+
+.switchContent {
+    background-color: #F7A84C;
+    border-color: transparent;
+    border-radius: 0.2em; 
+    font-size: 2vh;
+    font-weight: 400;
+    color: white;
 }
 
 .toBottom {
@@ -216,4 +231,28 @@ button {
     color: #377A68 !important;
     font-size: 15vw;
     transform: rotate(-90deg);
+}
+
+.toToppic {
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 1.8vh; 
+    color: #F7A84C;
+    position: absolute;
+    right: 4vw;
+    bottom: 0.2vh;
+}
+
+footer a{
+    width: 100%;
+    position: fixed;
+    bottom: 1vw;
+    text-align: center;
+    text-shadow: 1px 1px #dedede;
+    font-size: 0.8em;
+    color: #aaa !important;
+}
+
+footer a:hover {
+    color: white;
 }

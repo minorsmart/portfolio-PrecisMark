@@ -5,7 +5,8 @@
 }
 
 .mainWrapper .main div{
-    min-height: 20em;
+/*    min-height: 20em;*/
+    display: inline-table;
 }
 
 .mainWrapper .stair .img {
@@ -13,5 +14,5 @@
 }
 
 .mainWrapper .stair img {
-    min-width: 50%;
+    min-width: 80%;
 }

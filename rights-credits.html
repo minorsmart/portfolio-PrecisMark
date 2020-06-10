@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head include-html="snippets/header.html">
+    <title>Rights-Credits</title>
+    
+    <!-- Script for inserting standerd html -->
+    <script src="script/insertHtml.js"></script>
+    
+    <div include-html="snippets/header.html"></div>
+    
+    <!--javascript's-->
+    <script src="script/javascriptFunction.js"></script>
+</head>
+<body>
+    <div class="coverImage" id="coverImage" style="background-image: url('img/placeholder.png');"></div>
+    
+    <!-- Add linked content html files -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" include-html="snippets/navigationSnippet.html"></nav>
+    
+    <div class="mainWrapper" id="coversize">
+        <div class="prefase">
+            <div id="firstTekst">
+                <h3>Rights</h3>
+                <p><i>All content is protected by the outhor and can not be used without expliced permission to do so.</i></p>
+            </div>
+        </div>
+        <div class="main">
+            <h3>References</h3>
+            <p>Special thanks to the following creaters for providing free use media content and ore sharing there knowledge.</p>
+            <ul>
+                <h5>MSI team members</h5>
+                <a href="https://bettineee.github.io/portfolio-bettinewilligenburg/portfolio/Index.html" target="_blank"><li>Bettine Willigenburg</li></a>
+                <a href="https://minorsmart.github.io/portfolio-Mathys97/portfolio/" target="_blank"><li>Mathys kramer</li></a>
+                <h5>Stock Images</h5>
+                <li>unsplash.com</li>
+                <li>freePick.com</li>
+                <h5>Code examples</h5>
+                <li>w3schools.com</li>
+                <li>youtube creators</li>
+                <ul>
+                    <li>CodingTrain</li>
+                </ul>
+                <li>API's</li>
+                <ul>
+                    <li>Cat Facts</li>
+                    <li></li>
+                </ul>
+            </ul>
+        </div>
+        <a href="subject-MSI.html" class="toToppic">terug naar MSI</a>
+    </div>
+    
+    <!--    footer ( and scripts) -->
+    <footer include-html="snippets/footer.html"></footer>
+    
+    <!-- Add linked html files --> 
+    <script>
+        includeHTML();
+        
+        console.log('test');
+    </script>
+    
+    <!-- cat Facks API -->
+    <script src="script/catFacts.js"></script>
+</body>
+</html>
