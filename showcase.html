@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head include-html="snippets/header.html">
+    <title>Showcase</title>
+    
+    <!-- Script for inserting standerd html -->
+    <script src="script/insertHtml.js"></script>
+    
+    <div include-html="snippets/header.html"></div>
+    <link type="text/css" rel="stylesheet" media="screen and (min-width: 1200px)" href="css/simpleTekstTemplate.css">
+    
+    <!--javascript's-->
+    <script src="script/javascriptFunction.js"></script>
+</head>
+<body>
+    <div class="coverImage" id="coverImage" style="background-image: url('img/project/digitalCoach.jpg');"></div>
+    
+    <!-- Add linked content html files -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" include-html="snippets/navigationSnippet.html"></nav>
+    
+    <div class="mainWrapper" id="coversize">
+            <div class="prefase">
+                <div id="firstTekst">
+                    <h3>Showcase</h3>
+                    <p><i>We have developed two showcases to give you an idea of how a virtual coach can help in daily work. We used the persona’s Yon Phan and Nick Sanders. A persona is a characterization of a certain group of users, in this case ASML employees.<br><br>During the showcase you walk through a part of the day of the persona in quest. Here you see at which moments the coach could support an ASML employee. The actions and behaviour of the coach depends on the employee. The coach also pays attention to the people with whom the employee has, makes or wants to make contact with.  </i></p>
+                </div>
+            </div>
+            <div class="main grid1">
+                <div class="img"><img src="img/project/CoashInCall.png"></div>
+                <div class="tekstBlok">
+                    <h4>The Coach</h4>
+                    <p>The coach is still a concept and as mentioned in the previous section, further research is also needed in the field of the coach. This is only a representation of how the coach could help.<br><br>In addition to research, we also think that applying new technologies can make the coach more advanced. We were thinking about:</p>
+
+                    <ul>
+                        <li>IoT</li>
+                        <li>Health Tech</li>
+                        <li>Immersive Media</li>
+                        <li>Cybersecurity</li>
+                        <li>Voice Assistants</li>
+                        <li>Mobile Technologies</li>
+                    </ul>
+                </div>
+                <div class="img"><img src="img/project/CoachTip.png"></div>
+                <div class="tekstBlok">
+                    <h4>Voorbeeld</h4>
+                    <p>De coach kan op verschillende onderdelen ondersteunen. Op de eersteplaats monitoort de coach de gesprekken en moedigd deelnemers aan andere deelnemers betrokken te houden bij het gesprek. Dit komt vooral tot zijn recht wanneer deelnemers van verschillende culturen afkomstig zijn. Asiatische culturen hebben over het algemeen een sterke hierarchische bedrijfscultuur. Hierdoor wordt er niet snel tegen de 'baas' ingegaan.</p>
+                    <p>Meer weten over de coash? Probeer de <a href="https://xd.adobe.com/view/85307fb4-3a83-48d3-53a1-8e8924c7196a-f301/?fullscreen">showcase</a> zelf uit!</p>
+                </div>                
+            </div>
+            <div class="end">
+                <h3>Learnings</h3>
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+        
+        <div include-html="snippets/technologie-multipageSelector.html"></div>
+        <a href="subject-MSI.html" class="toToppic">terug naar MSI</a>
+    </div>
+
+    <!-- FOR BOOTSTRAP -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- Add linked html files --> 
+    <script include-html="script/javascriptFunction.js">
+        includeHTML();
+        
+        console.log('Logging to the console');
+    </script>
+</body>
+</html>

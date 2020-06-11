@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head include-html="snippets/header.html">
+    <title>MSI-competenties</title>
+    
+    <!-- Script for inserting standerd html -->
+    <script src="script/insertHtml.js"></script>
+    
+    <div include-html="snippets/header.html"></div>
+    <link type="text/css" rel="stylesheet" media="screen and (min-width: 1200px)" href="css/simpleTekstTemplate.css">
+    
+    <!--javascript's-->
+    <script src="script/javascriptFunction.js"></script>
+</head>
+<body>
+    <div class="coverImage" id="coverImage" style="background-image: url('img/technology/esp32.JPG');"></div>
+    
+    <!-- Add linked content html files -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" include-html="snippets/navigationSnippet.html"></nav>
+    
+    <div class="mainWrapper" id="coversize">
+            <div class="prefase">
+                <div id="firstTekst">
+                    <h3></h3>
+                    <p><i></i></p>
+                </div>
+            </div>
+            <div class="main grid1">
+<!--       Componenets List         -->
+                <div class="img"><img src="img/placeholder.png"></div>
+                <div class="tekstBlok">
+                    <h4>Smart Start</h4>
+                    <p></p>
+                    <ul>
+                        <li><p>Kan een complex probleem vanuit integraal perspectief onderkennen, mogelijke oorzaken en dwarsverbanden identificeren, ontleden en tot de kernpunten terugbrengen met behulp van meerdere analysetechnieken.</p></li>
+                        <li><p>Kan een complex probleem vanuit integraal perspectief onderkennen, mogelijke oorzaken en dwarsverbanden identificeren, ontleden en tot de kernpunten terugbrengen met behulp van meerdere analysetechnieken.</p></li>
+                        <li><p>Beschrijft de mate van volwassenheid van een organisatie m.b.t. Smart Industry in een business case.</p></li>
+                        <li><p>De student kan, zowel in het Nederlands als het Engels, ideeën, meningen, standpunten en besluiten correct, begrijpelijk en overtuigend overbrengen met behulp van verschillende communicatiekanalen.</p></li>
+                        <li><p>Kan mondeling en schriftelijk communiceren, intern op alle niveaus, effectief en in de gangbare bedrijfstaal, veelal in het Nederlands en/of Engels. Kan een adviesvraag helder krijgen. Kan een integraal advies opstellen en uitbrengen.</p></li>
+                        <li><p>Communiceert op effectieve wijze zijn bevindingen naar verschillende doelgroepen.</p></li>
+                        <li><p>De student kan relaties en allianties binnen en buiten de eigen organisatie ontwikkelen en bestendigen en deze benutten voor het verkrijgen van informatie, steun en medewerking.</p></li>
+                        <li><p>Kan contacten tactisch inzetten in verschillende situaties om doelen te bereiken.Is zich bewust van culturele diversiteit en kan daarmee rekening houden.</p></li>
+                        <li><p>Ontwikkelt een professioneel netwerk.</p></li>
+                        <li><p>De startende professional is in staat via de weg van reflectie zich professioneel te blijven ontwikkelen en een bijdrage te leveren aan de ontwikkeling van de organisatie en de beroepspraktijk door opgedane kennis te borgen, over te dragen en te verspreiden. Hierbij is de professional zich bewust van de ethische aspecten van de context waarin hij opereert en signaleert maatschappelijk, cultureel en moreel gevoelige punten en past zijn gedrag en/of zijn adviezen hierop aan.</p></li>
+                        <li><p>Kan zijn eigen handelen verantwoorden. Is in een continu proces bezig te reflecteren op zijn eigen handelen en zich verder te ontwikkelen. Kent de grenzen van de eigen verantwoordelijkheid.</p></li>
+                        <li><p>Werkt actief aan zijn professionele ontwikkeling.</p></li>
+                    </ul>
+                </div>
+<!--       LED blink test         -->
+                <div class="img"></div>
+                <div class="tekstBlok">
+                    <h4>Smart Start</h4>
+                    <p></p>
+                    <ul>
+                        <li><p>De student is in staat vernieuwende ideeën te ontwikkelen en deze te vertalen naar concepten voor processen, producten of diensten.</p></li>
+                        
+                    </ul>
+                </div>
+                </div>
+<!--        LDR test        -->
+                <div class="img">
+                    <button type="button" class="switchContent" id="change_2" style="z-index: 1; position: absolute; right: 0; top: auto;" onclick="showAndHideElement('foto2', 'code2', 'change_2')">Code</button>
+                    <img id="foto2" src="img/technology/2_LDR.jpg">
+                    <blockquote class="tekstBlok" id="code2">
+                    <pre>
+                    <!--  changed < in &lt; voor correct display  -->
+<code>from machine import Pin, ADC
+import utime
+ldrp = Pin(21, Pin.OUT)
+
+adc = ADC(Pin(39))
+adc.atten(ADC.ATTN_11DB)
+print(adc.read())
+
+p21 = Pin(21, Pin.OUT)      # create output pin on GPI21
+
+while True:
+    ldrp.value(1)
+
+    ligth = adc.read()
+    print("light", ligth)
+    ligtsterkte = 1000
+
+    print("light smaler than ligtsterkte", ligth &lt; ligtsterkte)
+    if (ligth &lt; ligtsterkte):
+        p21.on()                # set pin to "on" (high) level
+    else:
+        p21.off()
+        print("off")            # set pin to "off" (low) level
+
+    utime.sleep_ms(1000)</code>
+                    </pre>
+                </blockquote>
+                </div>
+                <div class="tekstBlok">
+                    <h4>LDR</h4>
+                    <p>Een LDR (Licht Depended resitor) wordt gebruikt om de intensiteit van licht te meten. Hoe meer licht de sensor opvangt hoe groter de weerstand en hoe kleiner de stroomsterkte. Deze strommsterkte wordt gemeten door de controller. Via de <a href="https://www.robotexchange.io/uploads/default/optimized/1X/6f43b88089740dd59db998f3f561ab87ba319d8a_2_1380x690.png">SVP pin</a> kan de controller de stromsterkte meten.<br>Wanneer de LDR onder een bepaalde waarde zakt gaat een LED branden.</p>
+                </div>
+<!--        SHS test        -->
+                <div class="img">
+                    <button type="button" class="switchContent" id="change_3" style="z-index: 1; position: absolute; right: 0; top: auto;" onclick="showAndHideElement('foto3', 'code3', 'change_3')">Code</button>
+                    <img id="foto3" src="img/technology/3_SHS.jpg">
+                    <blockquote class="tekstBlok" id="code3">
+                    <pre>
+<code>from machine import Pin, ADC
+import utime
+
+from machine import Pin
+
+p18 = Pin(18, Pin.OUT)
+
+# I use pin 33 for this!
+adc = ADC(Pin(33))
+
+
+for x in range (0, 50):
+    soil_moisture = adc.read()
+    print(soil_moisture)
+    p18.on()
+    utime.sleep(0.5)
+    p18.off()
+    utime.sleep(5)</code>
+                    </pre>
+                </blockquote>
+                </div>
+                <div class="tekstBlok">
+                    <h4>Soil Humidity Sensor</h4>
+                    <p>Een "Soil Humidity sensor" wordt gebruik om de mate van vochtigheid in de grond te meten. De sensor stuurd een stroompje door de grond. Waneer er weinig vocht in de grond zit wordt kan de stroom moeilijk verplaatsen en is de weerstand groter. Wanneer de grond een hogere vochtigheid heeft. Kan de stroom zich via het water gemakkelijker verplaatsen. En is de weerstand lager.</p>
+                </div>
+<!--      DHT test          -->
+                    <div class="img">
+                    <button type="button" class="switchContent" id="change_4" style="z-index: 1; position: absolute; right: 0; top: auto;" onclick="showAndHideElement('foto4', 'code4', 'change_4')">Code</button>
+                    <img id="foto4" src="img/technology/4_DHT.jpg">
+                    <blockquote class="tekstBlok" id="code4">
+                        <pre>
+<code>import dht
+import machine
+import utime
+
+from machine import Pin
+
+p4 = Pin(4, Pin.OUT)
+
+d = dht.DHT11(machine.Pin(12))
+d.measure()
+d.temperature() # eg. 23 (°C)
+d.humidity()    # eg. 41 (% RH)
+
+for x in range(1, 50):
+        p4.on()
+        print("temperature", d.temperature(), "c")
+        print("humidity", d.humidity(), "%")
+        print("")
+        utime.sleep_ms(10)
+        p4.off()
+        utime.sleep_ms(1000)              # set pin to "on" (high) level</code>
+                        </pre>
+                    </blockquote>
+                    </div>
+                    <div class="tekstBlok">
+                    <h3>DHT-sensor</h3>
+                    <p>Een DHT-sensor meet de vochtigheid en temparatuur in de lucht. Deze data wordt verzonder naar de controller en kan geprint worden in de console.</p>
+                </div>
+<!--       Relay test         -->
+                    <div class="img">
+                    <button type="button" class="switchContent" id="change_5" style="z-index: 1; position: absolute; right: 0; top: auto;" onclick="showAndHideElement('foto5', 'code5', 'change_4')">Code</button>
+                    <img id="foto5" src="img/technology/5_relay.jpg">
+                    <blockquote class="tekstBlok" id="code5">
+                        <pre>
+<code># Relay switching
+from machine import Pin
+import utime
+
+relay_pin = Pin(33, Pin.OUT)    # create output pin on GPIO2
+relay_pin.on()                 # set pin to "on" (high) level
+utime.sleep(1)
+relay_pin.off()                # set pin to "off" (low) level</code>
+                        </pre>
+                    </blockquote>
+                    </div>
+                <div class="tekstBlok">
+                    <h4>Relay module</h4>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                </div>
+                <blockquote class="tekstBlok">
+                    <pre>
+<code>from machine import Pin
+import utime
+
+p2 = Pin(21, Pin.OUT)    # create output pin on GPIO2
+
+while True:
+    p2.on()              # set pin to "on" (high) level
+    utime.sleep_ms(1000) # small delay
+    p2.off()</code>
+                    </pre>
+                </blockquote>
+                <div class="img"><img src="img/technology/Weerstation_bb.png"></div>
+                <div class="tekstBlok">
+                    <h4>Het volledige curcuit</h4>
+                    <p>Al de sensoren bij elkaar vormen de inputs voor het weerstation. In het schema is te zien dat er vijf LED's worden gebruikt. Door de LED te koppelen met de sensoren kan er visuele feedback gegeven worden.</p>
+                </div>
+                <blockquote class="tekstBlok">
+                  <pre>
+<code>&lt;ul&gt;
+    &lt;li&gt;&lt;p&gt;ESP32 microcontroller (Espressif Systems Processor)&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p&gt;LED en bijhoren weerstanden (~220 ohm)&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p&gt;LDR sensor (Light Depended Resistor&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p&gt;SHS (Soil Humidity Sensor)&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p&gt;DHT sensor (a humidity and temperature sensor&lt;/p&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;p&gt;Relay&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;</code>
+                  </pre>
+                </blockquote>
+            </div>
+            <div class="end">
+                <h3>Learnings</h3>
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+        
+        <div include-html="snippets/technologie-multipageSelector.html"></div>
+        <a href="subject-MSI.html" class="toToppic">terug naar MSI</a>
+    </div>
+
+    <!-- FOR BOOTSTRAP -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- Add linked html files --> 
+    <script include-html="script/javascriptFunction.js">
+        includeHTML();
+        
+        console.log('Logging to the console');
+    </script>
+</body>
+</html>

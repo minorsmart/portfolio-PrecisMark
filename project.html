@@ -1,39 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head include-html="snippets/header.html">
-    <title>ASML</title>
+    <title>Weerstation</title>
     
     <!-- Script for inserting standerd html -->
     <script src="script/insertHtml.js"></script>
     
     <div include-html="snippets/header.html"></div>
+    <link type="text/css" rel="stylesheet" media="screen and (min-width: 1200px)" href="css/simpleTekstTemplate.css">
     
     <!--javascript's-->
     <script src="script/javascriptFunction.js"></script>
+    
+    
+    <style>
+        #firstTekst {
+            margin: 0;
+            margin-right: 5%;
+            float: left;
+        }
+        
+        .prefase .img {
+            max-width: 15%;
+        }
+        
+        .bLeft {
+            float: left;
+        }
+        
+        .img {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .bright img {
+            float: right;
+        }
+        
+        .tekstBlok {
+            display: inline-block;
+            width: 60%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        
+    </style>
 </head>
 <body>
-    <div class="coverImage" id="coverImage" style="background-image: url('img/connection/code.jpeg');"></div>
+    <div class="coverImage" id="coverImage" style="background-image: url('img/project/Digital_com.jpg');"></div>
     
     <!-- Add linked content html files -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light" include-html="snippets/navigationSnippet.html"></nav>
     
     <div class="mainWrapper" id="coversize">
-        <iframe style="width: 90vw; height: 100vh; display: block;" src="https://next.canvanizer.com/canvas/rY38X7mfoMPbo" title="W3Schools Free Online Web Tutorials"></iframe>
+            <div class="prefase">
+                <div id="firstTekst">
+                    <h3>Verbeteren van de digitale communicatie</h3>
+                    <p><i>Technology is developing at lightning fast speeds and so is the arrival of virtual teams. ASML is a technology company that is an innovation leader in the semiconductor industry. With almost 25.000 employees from 118 different nationalities they work in 16 country’s and collaborate with partners, to offer market leading patented solutions and to stimulate the development of microchips.</i></p>
+                </div>
+                <div class="img"><img src="img/project/Logo-ASML.png"></div>
+            </div>
+            <div class="main stair">
+                <div>
+                    <div class="img bLeft"><img src="img/project/ASML team.jpg"></div>
+                    <div class="tekstBlok bright">
+                    <h4>De opdracht</h4>
+                    <p>The aim of this research is to optimize the digital teams so they can work more efficiently. ASML works with a lot of people from different nationalities and works at multiple locations around the world. Employees have to deal with different time zones and cultural differences. This can cause difficulties in the communication. This report formulates an advice based the main question: ‘How can ASML improve her virtual communication within (international) team's trough mart technology’. </p>
+                </div>
+                </div>
+                <div>
+                    <div class="tekstBlok bLeft">
+                    <h4>Onderzoek</h4>
+                    <p>De resultaten van het  onderzoek zijn op twee manieren tot stand gekomen. Op de eerste plaats zijn er verschillende onderzoeken gebustudeerd. Deze onderzoeken hebben geholpen de fundering te leggen van het tweede gedeelte in het onderzoek. In dit tweede gedeelte zijn er een verschillende werknemers binnen ASML geintervieuwd.</p>
+                </div>
+                    <div class="img bright">
+                        <img src="img/project/interview.jpg">
+                    </div>
+                </div>
+                <div>
+                    <div class="img bLeft"><img src="img/placeholder.png"></div>
+                    <div class="tekstBlok bright">
+                        <h4>Conclusie</h4>
+                        <p>In the conclusion we will answer the main question which is: “How can ASML improve her virtual communication within (international) team's trough smart technology?”. With the results from the desk research we answered the sub-questions. The conclusions of these sub-question were combined to provide an answer to our main question.</p>  
+                        
+                        <h5>ASML could improve its communication within the international teams on the following aspects: </h5>
+                        <ul>
+                            <li>Culture</li>
+                            <li>Time differences</li>
+                            <li>Behaviour</li>
+                            <li>Organization culture </li>
+                            <li>Languages</li>
+                            <li>Body language (micro expressions) </li>
+                            <li>Knowledge of the tools </li>
+                        </ul>  
+                            <p>To improve their communication trough smart technology we devised a digital tool. Using this tool and our findings ASML can conduct further research. This will be further explained in Chapter 6 Advice. The different aspects ASML could improve upon to enhance the efficiency of their communication are further explained below. <a href="files/Advisory report Virtual teams ASML v3.pdf" target="_blank"><i>Bekijk het volledige rapport</i></a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="end">
+                <h3>Learnings</h3>
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
         
-        <iframe style="width: 90vw; height: 100vh; display: block;" src="https://xd.adobe.com/view/85307fb4-3a83-48d3-53a1-8e8924c7196a-f301/?fullscreen" title="ASML"></iframe>
+        <div include-html="snippets/technologie-multipageSelector.html"></div>
         <a href="subject-MSI.html" class="toToppic">terug naar MSI</a>
     </div>
-    
+
     <!-- FOR BOOTSTRAP -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <!--    footer ( and scripts) -->
+    <footer include-html="snippets/footer.html"></footer>
     
     <!-- Add linked html files --> 
-    <script>
+    <script include-html="script/javascriptFunction.js">
         includeHTML();
         
-        console.log('test');
+        console.log('Logging to the console');
     </script>
 </body>
 </html>
