@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head include-html="snippets/header.html">
+    <title>Slides</title>
+    
+    <!-- Script for inserting standerd html -->
+    <script src="script/insertHtml.js"></script>
+    
+    <div include-html="snippets/header.html"></div>
+    
+    <!--javascript's-->
+    <script src="script/javascriptFunction.js"></script>
+</head>
+<body class="msiMain">
+    <div class="coverImage" id="coverImage" style="background-image: url('img/connection/code.jpeg');"></div>
+    
+    <!-- Add linked content html files -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" include-html="snippets/navigationSnippet.html"></nav>
+    
+    <div class="mainWrapper" id="coversize">
+        <div class="prefase">
+            <div id="firstTekst">
+                <h3>Slide show</h3>
+                <p><i>De slider maakt het mogelijk om meerdere afbeeldingen te laten zien zonder dat daar meer ruimte voor nodig is. De slide kan zowel handmatig als tegelijkertijd met een timer worden doorgeschoven. De code die gebruikt wordt maakt het ook mogelijk meerdere slides op een pagina te gebruiken.</i></p>
+            </div>
+        </div>
+        <div class="main">
+            <img src="img/connection/slides.png" style="border-radius: 0.8em;">
+            <a onclick="getCat()"><div>
+                <h4>De code</h4>
+                <p>De code bestaat uit een drietal functies. De bovenste functie autoSlide regeld het automatische doorschuiven van de de slides. De tweede functie plusSlides wordt gebruikt om de volgende slider te beinvloeden als er meedere sliders op de pagina aanwezig zijn. De laatste functie showSlides regeld de uiteindelijke slide.</p>
+            </div></a>
+        </div>
+        <a href="subject-MSI.html" class="toToppic">terug naar MSI</a>
+    </div>
+    
+    <!--    footer ( and scripts) -->
+    <footer><a href="rights-credits.html"><p>rights - references</p></a></footer>
+
+    <!-- Add linked html files --> 
+    <script>
+        includeHTML();
+    </script>
+    
+    <!-- cat Facks API -->
+    <script src="script/catFacts.js"></script>
+    
+    <!-- Nav (FOR BOOTSTRAP) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

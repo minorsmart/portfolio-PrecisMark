@@ -20,7 +20,7 @@
             display: inline-grid;
             grid-template-columns: 31% 31% 31%;
             grid-gap: 3.5%;
-/*            background-color: red;*/
+            padding-bottom: 15vh;
         }
 
         .gridBlock, .mySlides1, .mySlides2, .mySlides3 {
@@ -137,36 +137,23 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light" include-html="snippets/navigationSnippet.html"></nav>
         
     <div class="mainWrapper" id="coversize">
-        <div class="prefase">
-            <div id="firstTekst">
-                <h3>Smart Technologie</h3>
-                <p><i>Bij "Smart Technologie" maak je kennis met verschillende technologiën. In het eerste deel wordt er gewerkt aan het programmeren en maken van een <b>weerstation</b> dormmiddel van een <b>esp32 controler</b>. Nadat het ontwerpproces is afgerond wordt er een PCB (Printed Curcuit Board) ontworpen.</i></p>
-            </div>
-        </div>
         <div class="grid">
             <div class="gridBlock slideshow-container">
                 <h2 class="blockTitle">Slides</h2>
                   <div class="mySlides1">
-                    <img src="img/connection/slideCode.png">
+                      <a href="slides.html"><img src="img/connection/slideCode.png"></a>
                   </div>
 
                   <div class="mySlides1">
-                    <img src="img/FlynthPeople.jpg">
+                      <a href="slides.html">
+                        <img src="img/connection/slide.png"></a>
                   </div>
-
-                  <div class="mySlides1">
-                    <img src="img/MSI-Background.png">
-                  </div>
-
-                <div class="mySlides1">
-                    <img src="img/technology/5_relay.jpg">
-                </div>
                 <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
               <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
             </div>
             <div class="gridBlock textBlock">
-                <h4>Smart Technologie</h4>
-                <p><i>Bij "Smart Technologie" maak je kennis met verschillende technologiën. In het eerste deel wordt er gewerkt aan het programmeren en maken van een <b>weerstation</b> dormmiddel van een <b>esp32 controler</b>. Nadat het ontwerpproces is afgerond wordt er een PCB (Printed Curcuit Board) ontworpen.</i></p>
+                <h3>Smart Connection</h3>
+                <p><i>Op deze pagina staan verschillende verwijzingen naar "Smart connection" onderdelen. Die te maken hebben met het werkend krijgen van de website, voorbereiding, opbouwen en aanvullende opdrachten.</i></p>
             </div>
             <a href="gitHub.html"><div class="gridBlock">
                 <h2 class="blockTitle">GitHub</h2>
@@ -182,21 +169,16 @@
             </div>
             <div class="gridBlock slideshow-container">
                 <h2 class="blockTitle">API's</h2>
-              <div class="mySlides3">
-                <img src="img/placeholder.png">
+              <div class="mySlides2">
+                <a href="catsAPI.html"><img src="img/api/Cats.jpeg"></a>
               </div>
 
-              <div class="mySlides3">
+              <div class="mySlides2">
                 <img src="img/placeholder.png">
               </div>
-              <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
-              <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+              <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
             </div>
-            <a onclick="getCat()"><div class="gridBlock textBlock">
-                <h4>Cat Facts (API)</h4>
-                <p id="cat"></p>
-                <p><b><i>Click on tile to regenerate</i></b></p>
-            </div></a>
         </div>
         <a href="subject-MSI.html" class="toToppic">terug naar MSI</a>
     </div>
@@ -262,8 +244,5 @@
                 x[slideIndex[no]-1].style.display = "block";
             }
     </script>
-    
-    <!-- cat Facks API -->
-    <script src="script/catFacts.js"></script>
 </body>
 </html>
