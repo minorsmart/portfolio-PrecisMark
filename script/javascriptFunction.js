@@ -15,3 +15,13 @@ console.log("Start showAndHideElement()");
         z.innerHTML = 'Foto';
     }
 }
+
+function nextPrevButton(prev, next){
+    console.log("nextPrevButton has started");
+    
+    a = document.getElementById('prev');
+    a.setAttribute("href", prev);
+
+    b = document.getElementById('next');
+    b.setAttribute("href", next);
+}

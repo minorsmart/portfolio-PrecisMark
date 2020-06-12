@@ -106,6 +106,10 @@ body {
     margin: 4% 0;
 }
 
+.mainWrapper img {
+    box-shadow: 0.1em 1em 1em 0.1em #bbb;
+}
+
 #fadeContent {
     height: 5%;
     width: 80%;;
@@ -206,11 +210,11 @@ pre{
     text-align: center;
 }
 
-#next, #prev {
+#next button, #prev button {
     background-color: #F7A84C;
     border-color: transparent;
     border-radius: 0.4em; 
-    font-size: 3vh;
+    font-size: 1.5vh;
     color: #253F79;
 }
 
