@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head include-html="snippets/header.html">
+    <title>PCB Solderen</title>
+    
+    <!-- Script for inserting standerd html -->
+    <script src="script/insertHtml.js"></script>
+    
+    <div include-html="snippets/header.html"></div>
+    <link type="text/css" rel="stylesheet" media="screen and (min-width: 1200px)" href="css/simpleTekstTemplate.css">
+    
+    <!--javascript's-->
+    <script src="script/javascriptFunction.js"></script>
+</head>
+<body>
+    <div class="coverImage" id="coverImage" style="background-image: url('img/technology/pcbSolderen.jpeg');"></div>
+    
+    <!-- Add linked content html files -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" include-html="snippets/navigationSnippet.html"></nav>
+    
+    <div class="mainWrapper" id="coversize">
+            <div class="prefase">
+                <div id="firstTekst">
+                    <h3>Solderen</h3>
+                    <p><i>Zodra de zelf ontworpen PCB is aangekomen kan deze in elkaar gezet worden. Om te voorkomen dat het rommelig en ingeikkelder wordt dan nodig. Staat hieronder stapsgewijs een aanpak toegelicht.</i></p>
+                </div>
+            </div>
+            <div class="main grid1">
+                <div class="img">
+                    <button type="button" class="switchContent" id="change_1" style="z-index: 1; position: absolute; right: 0; top: auto;" onclick="showAndHideElement('opdr-1_LED.JPG', 'code_opdr-1_LED', 'change_1')">Code</button>
+                    <img id="opdr-1_LED.JPG" src="img/technology/pinnen_1.jpg">
+                    <img src="img/technology/pinnen_1.jpg" class="tekstBlok" id="code_opdr-1_LED" style="display: none;">
+                </div>
+                <div class="tekstBlok">
+                    <h4>Pinnen</h4>
+                    <p>Alleer eerste worden de pinnen vast gesoldeerd. Twee rijen voor de controller. En viermaal een rij van drie voor de losse sensoren.</p>
+                </div>
+<!--        LDR test        -->
+                <div class="img">
+                    <button type="button" class="switchContent" id="change_2" style="z-index: 1; position: absolute; right: 0; top: auto;" onclick="showAndHideElement('foto2', 'code2', 'change_2')">Code</button>
+                    <img id="foto2" src="img/technology/LEDs_2.jpg">
+                    <blockquote class="tekstBlok" id="code2">
+                    <pre>
+                    <!--  changed < in &lt; voor correct display  -->
+<code>from machine import Pin, ADC
+import utime
+ldrp = Pin(21, Pin.OUT)
+
+adc = ADC(Pin(39))
+adc.atten(ADC.ATTN_11DB)
+print(adc.read())
+
+p21 = Pin(21, Pin.OUT)      # create output pin on GPI21
+
+while True:
+    ldrp.value(1)
+
+    ligth = adc.read()
+    print("light", ligth)
+    ligtsterkte = 1000
+
+    print("light smaler than ligtsterkte", ligth &lt; ligtsterkte)
+    if (ligth &lt; ligtsterkte):
+        p21.on()                # set pin to "on" (high) level
+    else:
+        p21.off()
+        print("off")            # set pin to "off" (low) level
+
+    utime.sleep_ms(1000)</code>
+                    </pre>
+                </blockquote>
+                </div>
+                <div class="tekstBlok">
+                    <h4>LED's</h4>
+                    <p>De LED's zijn gesoldeerd samen met de weerstanden.</p>
+                </div>
+<!--        SHS test        -->
+                <div class="img">
+                    <button type="button" class="switchContent" id="change_3" style="z-index: 1; position: absolute; right: 0; top: auto;" onclick="showAndHideElement('foto3', 'code3', 'change_3')">Code</button>
+                    <img id="foto3" src="img/technology/LDR_3.jpg">
+                    <blockquote class="tekstBlok" id="code3">
+                    <pre>
+<code>from machine import Pin, ADC
+import utime
+
+from machine import Pin
+
+p18 = Pin(18, Pin.OUT)
+
+# I use pin 33 for this!
+adc = ADC(Pin(33))
+
+
+for x in range (0, 50):
+    soil_moisture = adc.read()
+    print(soil_moisture)
+    p18.on()
+    utime.sleep(0.5)
+    p18.off()
+    utime.sleep(5)</code>
+                    </pre>
+                </blockquote>
+                </div>
+                <div class="tekstBlok">
+                    <h4>LDR</h4>
+                    <p>Als laatste wordt de LDR  gesoldeerd. Deze sensor is heel gevoellig voor hitte. Bij deze sensor is het altijd verstandig om deze als een van de laatste te bevestigen aan de PCB.</p>
+                </div>
+<!--      DHT test          -->
+                    <div class="img">
+                    <button type="button" class="switchContent" id="change_4" style="z-index: 1; position: absolute; right: 0; top: auto;" onclick="showAndHideElement('foto4', 'code4', 'change_4')">Code</button>
+                    <img id="foto4" src="img/technology/curcuit.jpg">
+                    <blockquote class="tekstBlok" id="code4">
+                        <pre>
+<code>import dht
+import machine
+import utime
+
+from machine import Pin
+
+p4 = Pin(4, Pin.OUT)
+
+d = dht.DHT11(machine.Pin(12))
+d.measure()
+d.temperature() # eg. 23 (°C)
+d.humidity()    # eg. 41 (% RH)
+
+for x in range(1, 50):
+        p4.on()
+        print("temperature", d.temperature(), "c")
+        print("humidity", d.humidity(), "%")
+        print("")
+        utime.sleep_ms(10)
+        p4.off()
+        utime.sleep_ms(1000)              # set pin to "on" (high) level</code>
+                        </pre>
+                    </blockquote>
+                    </div>
+                    <div class="tekstBlok">
+                    <h3>Final product</h3>
+                    <p>Nu zijn alle vaste onderdelen gesoldeerd op de PCB. Nu kunnen de sensoren er los ingeplukt worden. Zoals op de afbeelding weergegeven.</p>
+                </div>
+            </div>
+<!--
+            <div class="end">
+                <h3>Learnings</h3>
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+-->
+        
+        <div include-html="snippets/technologie-multipageSelector.html" onclick="nextPrevButton('pcb.html', 'subject-MSI.html')"></div>
+        <a href="subject-MSI.html" class="toToppic">terug naar MSI</a>
+    </div>
+
+    <!-- FOR BOOTSTRAP -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!-- Add linked html files --> 
+    <script include-html="script/javascriptFunction.js">
+        includeHTML();
+        
+        console.log('Logging to the console');
+    </script>
+</body>
+</html>

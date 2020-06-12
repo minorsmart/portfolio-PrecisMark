@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head include-html="snippets/header.html">
+    <title>PCB</title>
+    
+    <!-- Script for inserting standerd html -->
+    <script src="script/insertHtml.js"></script>
+    
+    <div include-html="snippets/header.html"></div>
+    <link type="text/css" rel="stylesheet" media="screen and (min-width: 1200px)" href="css/simpleTekstTemplate.css">
+    
+    <!--javascript's-->
+    <script src="script/javascriptFunction.js"></script>
+    
+    
+    <style>
+        #firstTekst {
+            margin: 0;
+            margin-right: 5%;
+            float: left;
+        }
+        
+        .prefase .img {
+            max-width: 15%;
+        }
+        
+        .bLeft {
+            float: left;
+        }
+        
+        .img {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .bright img {
+            float: right;
+        }
+        
+        .tekstBlok {
+            display: inline-block;
+            width: 60%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .gridBlock, .mySlides1, .mySlides2, .mySlides3 {
+            position: relative;
+            width: 100%;
+            font-size: 5vw;
+            text-align: center;
+            overflow: hidden;
+            box-shadow: 2px 2px 5px #eaeaea;
+        }
+    </style>
+    <style>
+    .mySlides1, .mySlides2, .mySlides3 {
+        display: none;
+    }
+
+    /* Next & previous buttons */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        color: #F7A84C !important;
+        font-weight: bold;
+        transition: 0.6s ease;
+        border-radius: 3px;
+        user-select: none;
+        height: 100%;
+        width: 30%;
+        padding-top: 22%;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        padding-left: 10%;
+    }
+        
+    .prev {
+        left: 0;
+        padding-right: 10%;
+    }
+
+    /* On hover, add a grey background color */
+    .prev:hover, .next:hover {
+        color: white!important;
+    }
+        
+    .next:hover {
+        background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.6));
+    }
+        
+    .prev:hover {
+        background-image: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0.6));
+    }
+</style>
+</head>
+<body>
+    <div class="coverImage" id="coverImage" style="background-image: url('img/technology/PCB.jpeg');"></div>
+    
+    <!-- Add linked content html files -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" include-html="snippets/navigationSnippet.html"></nav>
+    
+    <div class="mainWrapper" id="coversize">
+            <div class="prefase">
+                <div id="firstTekst">
+                    <h3>BCP</h3>
+                    <p><i>Een Printed Curcuit Board ookwel kort een BCP genoemd. Is bord waar elektronische componeneten op gesoldeerd worden. Een PCB wordt gebruikt om een elektronisch curcuit op te maken. Om elektronische componeneten met elkaar te verbinden.<br><br>
+                    Op de vorige pagina was dit curcuit op een breadboard ontworpen. Dit heeft als voordeel dat je de componeneten gemakkelijken kan monteren en demonteren.</i></p>
+                </div>
+                <div class="img"><img src="img/technology/pcbSolderen.jpeg"></div>
+            </div>
+            <div class="main stair">
+                <div>
+                    <div class="img bLeft"><img src="img/technology/Autodesk.png"></div>
+                    <div class="tekstBlok bright">
+                        <h4>Een BCP ontwerpen</h4>
+                        <p>Voordat een BCP "geprint" kan worden moet deze eerst ontworpen worden. Dit kan doormiddel van een tal van verschillende applicaties. In de workshop "Smart Technologie" werd <a href="https://www.autodesk.com/products/eagle/overview?plc=F360&term=1-YEAR&support=ADVANCED&quantity=1">Autodesk Eagle</a> gebruikt. Maar ook <a href="https://fritzing.org/download/">Fritsing</a> is een vergelijkbaar programma waarmee BCP's ontworpen kunnen worden.</p>
+                    </div>
+                </div>
+                <div>
+                    <!--       Tree and Branch         -->
+                    <div class="tekstBlok bLeft">
+                        <h4>PCB Schema ontwerpen</h4>
+                        <p>Voordat je het curcuit gaat maken pak je eerst alle benodigde onderdelen. Vervolgen label je alle in- en uitgangen. Het maakt niet uit op waar je de onderdelen plaat op het scherm. Het enige waat je op hoeft te letten is de juiste labeling en de juiste componenten.</p>
+                    </div>
+                    <div class="img bright gridBlock slideshow-container">
+                          <div class="mySlides1">
+                            <img src="img/technology/Schema-editor.png">
+                          </div>
+                          <div class="mySlides1">
+                            <img src="img/technology/schema.png">
+                          </div>
+                        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                      <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="img bleft gridBlock slideshow-container">
+                        <div class="mySlides2">
+                          <img src="img/technology/Layout editor.png">
+                        </div>
+                        <div class="mySlides2">
+                            <img src="img/technology/Layout.png">
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+                    </div>
+                    <div class="tekstBlok bright">
+                        <h4>PCB Layout ontwerpen</h4>
+                        <p>Vervolgen kun je het schema omzetten in een layout. In de layout editor ga je de afmetingen van de PCB bepalen. Ook plaats je hier de componenten op de plek waar je die wilt hebben.<br>Omdat je in de schema editor de in- en uitgangen met behulp van zelfde labeling aan elkaar hebt gekopeld. Kan in de layout editor met een druk op de knop de kanalen worden gelegd. Vaak gaat dit de eerste keer vrij goed. Soms moeten er nog handmatige aanpassingen worden gedaan.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="tekstBlok bLeft">
+                        <h4>Printed Curcuit Board</h4>
+                        <p>Nadat het board is ontworpen en het ontwerp is verstuurd en wordt deze gerpint. Het resultaat ziet er dan zo uit.</p>
+                    </div>
+                    <div class="img bright">
+                        <img id="foto3" src="img/technology/pcbOntwerp.JPG">
+                    </div>
+                </div>
+            </div>
+<!--
+            <div class="end">
+                <h3>Learnings</h3>
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+-->
+        
+        <div include-html="snippets/technologie-multipageSelector.html" onclick="nextPrevButton('technologie.html', 'solderen.html')"></div>
+        <a href="subject-MSI.html" class="toToppic">terug naar MSI</a>
+    </div>
+
+    <!-- FOR BOOTSTRAP -->
+        <!--    footer ( and scripts) -->
+    <footer include-html="snippets/footer.html"></footer>
+    
+    <!-- Add linked html files --> 
+    <script include-html="script/javascriptFunction.js">
+        includeHTML();
+        
+        console.log('Logging to the console');
+    </script>
+    <!-- Slides ---> 
+    <script>
+            var slideIndex = [1,1];
+            var slideId = ["mySlides1", "mySlides2"]
+            showSlides(1, 0);
+            showSlides(1, 1);
+//            showSlides(1, 2);
+            
+            var lastSlide = 0;
+
+            var myVar = setInterval(autoSlide, 10000);   
+            function autoSlide(){
+                console.log('lastSlide = ', lastSlide);
+                if (lastSlide < slideId.length){
+                    plusSlides(1, lastSlide);
+                    console.log(1, lastSlide);
+                    lastSlide = lastSlide + 1;
+                    console.log('lastSlide+ = ', lastSlide);
+                } else {
+                    lastSlide = 0;
+                    autoSlide();
+                }
+            }
+
+            function plusSlides(n, no) {
+                showSlides(slideIndex[no] += n, no);
+            }
+
+            function showSlides(n, no) {
+                var i;
+                var x = document.getElementsByClassName(slideId[no]);
+                console.log(slideId[no]);
+
+                if (n > x.length) {
+                    console.log(slideIndex[no] = 1);
+                    slideIndex[no] = 1
+                }   
+                 
+                if (n < 1) {
+                    console.log(slideIndex[no] = x.length);
+                    slideIndex[no] = x.length
+                }
+                 
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x[slideIndex[no]-1].style.display = "block";
+            }
+    </script>
+</body>
+</html>
