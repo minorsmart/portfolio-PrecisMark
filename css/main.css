@@ -93,8 +93,9 @@ body {
 
 .mainWrapper {
     position: absolute;
-    top: 120vh;
+    top: 110vh;
     
+    min-height: 100vh;
     margin: 5%;
 }
 
